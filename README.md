@@ -3,9 +3,7 @@
 [![CI](https://github.com/cgoberg/agent-authenticator/actions/workflows/ci.yml/badge.svg)](https://github.com/cgoberg/agent-authenticator/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-111111.svg)](LICENSE)
 
-Forge Nord's encrypted TOTP vault for MCP agents.
-
-Keep the seed cold. Hand the code to the model.
+Encrypted local TOTP vault for MCP agents.
 
 `agent-authenticator` is a self-hostable MCP server that stores TOTP secrets in
 an encrypted local vault and generates one-time codes on demand for AI agents.
@@ -17,27 +15,27 @@ needs a 2FA code, but should never see or persist the underlying secret.
 - Project page: https://forgenord.com/projects#agent-authenticator
 - Forge Nord dispatch: https://forgenord.com/dispatches/agent-authenticator
 
-## Why It Exists
+## Scope
 
 - Agents increasingly need to complete authenticated workflows.
 - Most authenticator apps are built for humans tapping a phone, not tools.
 - Copying raw TOTP seeds into prompts, notes, or scripts is a bad trade.
 
-Agent Authenticator gives you a narrow interface instead:
+Agent Authenticator exposes a narrow interface:
 
 - encrypted vault at rest
 - current code generation on demand
 - zero secret exposure through the MCP tool surface
 - audit log for security-sensitive actions
 
-## Forge Nord Feel
+## Defaults
 
-This project is intentionally small, sharp, and disciplined:
+The default behavior is conservative:
 
 - local-first by default
 - loopback-only HTTP by default
 - explicit opt-in for remote HTTP binding
-- beautiful first-run ergonomics without protocol noise
+- first-run key setup without printing secrets to standard output
 
 ## MCP Tools
 
