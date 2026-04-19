@@ -1,5 +1,8 @@
 # Agent Authenticator
 
+[![CI](https://github.com/cgoberg/agent-authenticator/actions/workflows/ci.yml/badge.svg)](https://github.com/cgoberg/agent-authenticator/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-111111.svg)](LICENSE)
+
 Forge Nord's encrypted TOTP vault for MCP agents.
 
 Keep the seed cold. Hand the code to the model.
@@ -8,6 +11,12 @@ Keep the seed cold. Hand the code to the model.
 an encrypted local vault and generates one-time codes on demand for AI agents.
 It is designed for the real workflow: Claude Code, Cursor, or another agent
 needs a 2FA code, but should never see or persist the underlying secret.
+
+## Launch Links
+
+- Project page: https://forgenord.com/projects#agent-authenticator
+- English write-up: https://carl-gustav.dev/posts/en/agent-authenticator-ai-agents-2fa-without-seeing-secrets
+- Svensk text: https://carl-gustav.se/posts/sv/agent-authenticator-ai-agenter-2fa-utan-att-se-hemligheten
 
 ## Why It Exists
 
