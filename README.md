@@ -15,8 +15,7 @@ needs a 2FA code, but should never see or persist the underlying secret.
 ## Launch Links
 
 - Project page: https://forgenord.com/projects#agent-authenticator
-- English write-up: https://carl-gustav.dev/posts/en/agent-authenticator-ai-agents-2fa-without-seeing-secrets
-- Svensk text: https://carl-gustav.se/posts/sv/agent-authenticator-ai-agenter-2fa-utan-att-se-hemligheten
+- Forge Nord dispatch: https://forgenord.com/dispatches/agent-authenticator
 
 ## Why It Exists
 
