@@ -1,0 +1,55 @@
+[project]
+name = "agent-authenticator"
+version = "0.2.0"
+description = "Forge Nord's self-hostable TOTP MCP server for AI agents"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "Forge Nord", email = "carl-gustav@forgenord.com" }]
+keywords = ["totp", "2fa", "mcp", "mcp-server", "ai-agent", "authenticator"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "cryptography>=43.0.0",
+    "fastmcp>=2.0.0",
+    "filelock>=3.13.0",
+    "pyotp>=2.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2.2",
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.11.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/forge-nord/agent-authenticator"
+Repository = "https://github.com/forge-nord/agent-authenticator"
+Issues = "https://github.com/forge-nord/agent-authenticator/issues"
+
+[project.scripts]
+agent-authenticator = "agent_authenticator.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agent_authenticator"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
